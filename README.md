@@ -25,3 +25,10 @@ If you face some sort of UnhandledPromiseRejectionWarning like I did, use the be
 - see library.js file
 
 4. Run **node library.js**
+
+## Step 2: Script in Selenium
+
+Some helpful resources:
+
+- https://www.selenium.dev/selenium/docs/api/javascript/
+- https://saucelabs.com/resources/articles/selenium-tips-css-selectors

@@ -1,23 +1,36 @@
-// install what By and until modules from Selenium
 var webdriver = require("selenium-webdriver"),
   By = webdriver.By,
   until = webdriver.until;
-// sets up chromedriver capabilities
 var chrome = require("selenium-webdriver/chrome");
 var path = require("chromedriver").path;
 var service = new chrome.ServiceBuilder(path).build();
 chrome.setDefaultService(service);
 
-// builds the Chrome webdriver
 var driver = new webdriver.Builder()
   .withCapabilities(webdriver.Capabilities.chrome())
   .build();
 
-// access the Library app
 driver.get("https://library-app.firebaseapp.com/");
 
-// sleep so you can see it open
-driver.sleep(3000);
+// find elements based on id, css, partial Link, Link, or xpath
+driver.findElement(By.id("ember20"));
+driver.findElement(By.css("input"));
 
-// ends the session
+// whitespace ("parent child")
+driver.findElements(By.css("nav li")).then(function(elements) {
+  elements.map(function(element) {
+    element.getText().then(function(txt) {
+      console.log("The text of each nav bar element is: " + txt);
+    });
+  });
+});
+driver.findElement(By.partialLinkText("Library"));
+driver
+  .findElement(By.xpath("//button"))
+  .getText()
+  .then(function(txt) {
+    console.log("The text of the button is: " + txt);
+  });
+
+driver.sleep(3000);
 driver.quit();
