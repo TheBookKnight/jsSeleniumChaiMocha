@@ -12,11 +12,40 @@ var driver = new webdriver.Builder()
 
 driver.get("https://library-app.firebaseapp.com/");
 
-// find elements based on id, css, partial Link, Link, or xpath
-driver.findElement(By.id("ember20"));
-driver.findElement(By.css("input"));
+// Opens the Admin dropdown, then we display the text of each child item
+driver.findElement(By.id("ember20")).click();
+driver.findElements(By.css("#ember20__menu li")).then(function(elements) {
+  elements.map(function(element) {
+    element.getText().then(function(txt) {
+      console.log("The dropdown opened and has this element: " + txt);
+    });
+  });
+});
 
-// whitespace ("parent child"), this also gets navbar elements
+// Send text to input bar
+driver.findElement(By.css("input")).sendKeys("practice@stuff.com");
+
+// custom explicit wait until button opacity is '1'
+driver.wait(function() {
+  return driver
+    .findElement(By.xpath("//button"))
+    .getCssValue("opacity")
+    .then(function(result) {
+      return result === "1";
+    });
+}, 1000);
+
+// click the button
+driver.findElement(By.xpath("//button")).click();
+
+// explicit wait until alert success is displayed
+driver
+  .wait(until.elementLocated(By.css(".alert-success"), 5000))
+  .getText()
+  .then(function(txt) {
+    console.log("Alert success text displayed.");
+  });
+
 driver.findElements(By.css("nav li")).then(function(elements) {
   elements.map(function(element) {
     element.getText().then(function(txt) {
@@ -24,13 +53,8 @@ driver.findElements(By.css("nav li")).then(function(elements) {
     });
   });
 });
+
 driver.findElement(By.partialLinkText("Library"));
-driver
-  .findElement(By.xpath("//button"))
-  .getText()
-  .then(function(txt) {
-    console.log("The text of the button is: " + txt);
-  });
 
 driver.sleep(3000);
 driver.quit();

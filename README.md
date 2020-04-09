@@ -11,7 +11,7 @@
 ## Step 1: Download all necessary dependencies for Selenium
 
 These dependencies should reflect on your 'package.json'
-Visit tag '0001_setup'
+Visit tag **'0001_setup'**
 
 1. Install Selenium
 
@@ -33,9 +33,12 @@ If you face some sort of UnhandledPromiseRejectionWarning like I did, use the be
 
 4. Run **_node library.js_**
 
-## Step 2: Script in Selenium
+## Step 2: Find elements to automate
+
+Visit tag **'0002_findWebElements'**
 
 Some helpful resources:
 
 - https://www.selenium.dev/selenium/docs/api/javascript/
 - https://saucelabs.com/resources/articles/selenium-tips-css-selectors
+- https://www.browserstack.com/guide/css-selectors-in-selenium
