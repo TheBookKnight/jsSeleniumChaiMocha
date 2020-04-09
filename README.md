@@ -5,6 +5,7 @@
 ## Step 1: Download all necessary dependencies for Selenium
 
 These dependencies should reflect on your 'package.json'
+Visit tag '0001_setup'
 
 1. Install Selenium
 
@@ -24,7 +25,7 @@ If you face some sort of UnhandledPromiseRejectionWarning like I did, use the be
 
 - see library.js file
 
-4. Run **node library.js**
+4. Run **_node library.js_**
 
 ## Step 2: Script in Selenium
 

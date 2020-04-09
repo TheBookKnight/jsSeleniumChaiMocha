@@ -16,7 +16,7 @@ driver.get("https://library-app.firebaseapp.com/");
 driver.findElement(By.id("ember20"));
 driver.findElement(By.css("input"));
 
-// whitespace ("parent child")
+// whitespace ("parent child"), this also gets navbar elements
 driver.findElements(By.css("nav li")).then(function(elements) {
   elements.map(function(element) {
     element.getText().then(function(txt) {
