@@ -3,7 +3,6 @@ var webdriver = require("selenium-webdriver"),
   By = webdriver.By,
   until = webdriver.until,
   assert = require("assert");
-
 var chrome = require("selenium-webdriver/chrome");
 var path = require("chromedriver").path;
 var service = new chrome.ServiceBuilder(path).build();

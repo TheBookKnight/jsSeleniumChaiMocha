@@ -11,7 +11,7 @@
 ## Step 1: Download all necessary dependencies for Selenium
 
 These dependencies should reflect on your 'package.json'
-Visit tag **'0001_setup'**
+Visit tag **'0001_setup'**.
 
 1. Install Selenium
 
@@ -37,6 +37,7 @@ If you face some sort of UnhandledPromiseRejectionWarning like I did, use the be
 
 Visit tag **'0002_findWebElements'** to identify web elements.
 Visit tag **'0003_sendKeysClickWaits'** for web element actions.
+See _library.js_ file.
 
 Some helpful resources:
 
@@ -46,7 +47,9 @@ Some helpful resources:
 
 ## Step 3: Adding Mocha
 
-1. Install _mocha_ globally
+The _library.js_ file is renamed to _test_library.js_ and added to the _test_ module.
+
+1. Install _Mocha_ globally
    **_"npm install --global mocha"_**
 
 2. Setup hooks for test run cycle
@@ -54,3 +57,11 @@ Some helpful resources:
 
 3. Add asserts using Node.js
    https://nodejs.org/api/assert.html
+
+## Step 4: Adding Mochawesome (as the Report)
+
+1. Install _Mochawesome_
+   **_"npm install --save-dev mochawesome"_**
+
+2. Run command to show Test Report
+   **_"mocha test --reporter mochawesome --reporter-options autoOpen=true"_**

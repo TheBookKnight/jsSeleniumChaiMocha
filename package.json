@@ -23,6 +23,7 @@
     "selenium-webdriver": "^3.6.0"
   },
   "devDependencies": {
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0"
   }
 }
