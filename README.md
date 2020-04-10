@@ -6,7 +6,7 @@
 
 1. Used NodeJS and NPM. Helpful resource: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 2. Setup your editor or IDE. I used _Visual Studio Code_
-3. (optional) I downloaded HomeBrew
+3. _Optional_ I downloaded HomeBrew (since NPM might not downloaded the packages correctly)
 
 ## Step 1: Download all necessary dependencies for Selenium
 
@@ -33,12 +33,24 @@ If you face some sort of UnhandledPromiseRejectionWarning like I did, use the be
 
 4. Run **_node library.js_**
 
-## Step 2: Find elements to automate
+## Step 2: Automate web elements with Selenium
 
-Visit tag **'0002_findWebElements'**
+Visit tag **'0002_findWebElements'** to identify web elements.
+Visit tag **'0003_sendKeysClickWaits'** for web element actions.
 
 Some helpful resources:
 
 - https://www.selenium.dev/selenium/docs/api/javascript/
 - https://saucelabs.com/resources/articles/selenium-tips-css-selectors
 - https://www.browserstack.com/guide/css-selectors-in-selenium
+
+## Step 3: Adding Mocha
+
+1. Install _mocha_ globally
+   **_"npm install --global mocha"_**
+
+2. Setup hooks for test run cycle
+   https://mochajs.org/#run-cycle-overview
+
+3. Add asserts using Node.js
+   https://nodejs.org/api/assert.html
