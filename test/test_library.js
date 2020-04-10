@@ -25,12 +25,17 @@ describe("Library App Test Suite", function() {
     driver.get("https://library-app.firebaseapp.com/");
   });
 
-  // 'it' is each testcase
+  // 'it' is used in each testcase
   it("Given the Admin dropdown, when clicked, then it SHOULD display three items.", function() {
     driver.findElement(By.id("ember20")).click();
     driver.findElements(By.css("#ember20__menu li")).then(function(elements) {
-      console.log(elements.length);
-      assert(elements.length === 3);
+      // used Node's Assert, note it has limited functionality
+      // Assert.equal(actual, expected, message)
+      assert.equal(
+        elements.length,
+        3,
+        "The Admin dropdown has " + elements.length + " items."
+      );
     });
   });
 
@@ -39,7 +44,7 @@ describe("Library App Test Suite", function() {
       .findElement(By.css("button"))
       .getCssValue("opacity")
       .then(function(opacity) {
-        assert(opacity === "0.65");
+        assert.equal(opacity, "0.65", "The button opacity is : " + opacity);
       });
   });
 
@@ -58,8 +63,10 @@ describe("Library App Test Suite", function() {
       .wait(until.elementLocated(By.css(".alert-success"), 5000))
       .getText()
       .then(function(txt) {
-        assert(
-          txt.substring(0, 38) === "Thank you! We saved your email address"
+        assert.equal(
+          txt.substring(0, 38),
+          "Thank you! We saved your email address",
+          "The Alert Text displayed : " + txt.substring(0, 38)
         );
       });
   });
