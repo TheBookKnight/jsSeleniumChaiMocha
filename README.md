@@ -97,3 +97,9 @@ Optional: Visit tag **'0007_pommethods'** for POM method shortcuts.
 
 2. Use any methods needed based off ChaiJS models
    https://www.chaijs.com/guide/styles/
+
+## Optional: Implement Locators
+
+1. Moved _home_page.js_ to the newly created **home** folder.
+
+2. Created _home_locators.js_ file and moved the locators to that file.
