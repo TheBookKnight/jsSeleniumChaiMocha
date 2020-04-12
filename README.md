@@ -73,7 +73,10 @@ Visit tag **'0005_Mochawesome'** for mocha implementation.
 2. Run command to show Test Report
    **_"mocha test --reporter mochawesome --reporter-options autoOpen=true"_**
 
-## Step 5: Implementing Page Object Model
+## Step 5: Implementing Page Object Model (POM)
+
+Visit tag **'0006_pom'** for POM implementation.
+Optional: Visit tag **'0007_pommethods'** for POM method shortcuts.
 
 1. Create a Base template for all webpages. See _base_page.js_
 
@@ -83,3 +86,14 @@ Visit tag **'0005_Mochawesome'** for mocha implementation.
 
 4. Use NodeJS Assertions to verify test. See _test_library.js_
    https://nodejs.org/api/assert.html
+
+5. Optional: Add shortcut POM methods.
+
+## Step 6: Chai
+
+1. Install 'Chai' and 'Chai-as-Promise'
+   **_"npm install chai --save"_**
+   **_"npm install chai-as-promised"_**
+
+2. Use any methods needed based off ChaiJS models
+   https://www.chaijs.com/guide/styles/

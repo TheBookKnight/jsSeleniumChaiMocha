@@ -11,31 +11,26 @@ Home.prototype.alertSuccess = function() {
 Home.prototype.adminDropdown = function() {
   return this.find(By.id("ember20"));
 };
+// Removed '.then' since Chai's 'Eventually' takes care of promises
 Home.prototype.adminDropdownItems = function() {
-  return this.findAll(By.css("#ember20__menu li")).then(function(items) {
-    return items;
-  });
+  return this.findAll(By.css("#ember20__menu li"));
 };
 Home.prototype.emailInput = function() {
   return this.find(By.css("input"));
 };
 
 /**
- * Added methods since only typing and getting opacity
- * is restricted to only this Home page.
+ * Methods
  */
+// Removed '.then' since Chai's 'Eventually' takes care of promises
 Home.prototype.typeEmailInput = function(text) {
-  return this.find(By.css("input")).then(function(obj) {
-    return obj.sendKeys(text);
-  });
+  return this.find(By.css("input")).sendKeys(text);
 };
+// Removed '.then' since Chai's 'Eventually' takes care of promises
 Home.prototype.getOpacityForRequestBtn = function() {
-  return this.find(By.css("button"))
-    .getCssValue("opacity")
-    .then(function(opacity) {
-      return opacity;
-    });
+  return this.find(By.css("button")).getCssValue("opacity");
 };
+// '.then' still needed here
 Home.prototype.waitOpacityForRequestBtn = function(target) {
   return this.find(By.css("button"))
     .getCssValue("opacity")
