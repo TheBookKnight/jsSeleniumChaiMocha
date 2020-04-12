@@ -1,12 +1,15 @@
 var { describe, it, after, before } = require("selenium-webdriver/testing"),
   assert = require("assert");
-// implements readable template for Home page
+var chai = require("chai");
+var chaiAsPromised = require("chai-as-promised");
+var should = chai.should();
 var Home = require("../pages/home_page");
+chai.use(chaiAsPromised); // uses 'chai-as-promised' plugin
 var home_page;
 
 /**
- * Implement the page objects. You can tell it's
- * more readable now.
+ * Chai-as-promised allows you to extract the value from
+ * a Promised value and Assert it.
  */
 describe("Library App Test Suite", function() {
   this.timeout(10000);
@@ -27,15 +30,15 @@ describe("Library App Test Suite", function() {
     });
   });
 
-  it("Given no text in Email input, when you click the 'Request Invtation' button, then the button's opacity should be 0.65.", function() {
-    home_page.getOpacity(home_page.requestBtn()).then(function(opacity) {
+  it("Given no text in Email input, when you click 'Request Invitation' button, then the button's opacity should be 0.65.", function() {
+    home_page.getOpacityForRequestBtn().then(function(opacity) {
       assert.equal(opacity, "0.65", "The button opacity is : " + opacity);
     });
   });
 
-  it("Given text in Email input, when you click the 'Request Invitation' button, then it SHOULD display a confirmation message.", function() {
-    home_page.type(home_page.emailInput(), "practice@stuff.com");
-    home_page.waitForOpacity(home_page.requestBtn(), "1");
+  it("Given text in Email input, when you click 'Request Invitation' button, then there SHOULD be a confirmation message.", function() {
+    home_page.typeEmailInput("practice@stuff.com");
+    home_page.waitOpacityForRequestBtn("1");
     home_page.requestBtn().click();
     home_page
       .alertSuccess()

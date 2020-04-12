@@ -1,12 +1,7 @@
-// Imports needed from base template
 var Home = require("./base_page");
 var webdriver = require("selenium-webdriver"),
   By = webdriver.By;
 
-/**
- * Defining each page object that can be understood
- * at business-level.
- */
 Home.prototype.requestBtn = function() {
   return this.find(By.css("button"));
 };
@@ -25,5 +20,28 @@ Home.prototype.emailInput = function() {
   return this.find(By.css("input"));
 };
 
-// Exports template to be used in tests
+/**
+ * Added methods since only typing and getting opacity
+ * is restricted to only this Home page.
+ */
+Home.prototype.typeEmailInput = function(text) {
+  return this.find(By.css("input")).then(function(obj) {
+    return obj.sendKeys(text);
+  });
+};
+Home.prototype.getOpacityForRequestBtn = function() {
+  return this.find(By.css("button"))
+    .getCssValue("opacity")
+    .then(function(opacity) {
+      return opacity;
+    });
+};
+Home.prototype.waitOpacityForRequestBtn = function(target) {
+  return this.find(By.css("button"))
+    .getCssValue("opacity")
+    .then(function(opacity) {
+      return opacity === target;
+    });
+};
+
 module.exports = Home;

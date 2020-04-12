@@ -53,10 +53,14 @@ Visit tag **'0004_mocha'** for mocha implementation.
 1. Install _Mocha_ globally
    **_"npm install --global mocha"_**
 
-2. Setup hooks for test run cycle
+2. If not there, add **"test_libary": "mocha"** to the _package.json_.
+   It allows you to run your test scripts with Mocha.
+   See mine as an example.
+
+3. Setup hooks for test run cycle
    https://mochajs.org/#run-cycle-overview
 
-3. Add asserts using Node.js
+4. Add asserts using Node.js
    https://nodejs.org/api/assert.html
 
 ## Step 4: Adding Mochawesome (as the Report)
