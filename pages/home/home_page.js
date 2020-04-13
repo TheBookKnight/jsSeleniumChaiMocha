@@ -1,5 +1,4 @@
 var Home = require("../base_page");
-// implement Locators
 var Locator = require("./home_locators");
 
 Home.prototype.requestBtn = function() {

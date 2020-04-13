@@ -1,8 +1,6 @@
 var webdriver = require("selenium-webdriver"),
   By = webdriver.By;
-/**
- * This will make it easy to edit the Locators when needed
- */
+
 module.exports = {
   requestBtn: By.css("button"),
   alertSuccess: By.css(".alert-success"),
