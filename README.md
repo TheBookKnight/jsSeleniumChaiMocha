@@ -1,8 +1,46 @@
-# JavaScript tutorial using Selenium, Chai, and Mocha.
+# JavaScript tutorial using Selenium Webdriver, Chai, and Mocha.
 
-> Will be testing on https://library-app.firebaseapp.com/ from a [EmberJS tutorial](https://yoember.com/).
+> By: Joshua Cadavez
 
-> This tutorial was done on a Mac OS. I don't have an explicit tutorial for Windows. But, I'll post a YouTube playlist where viewers suggest alternatives.
+Will be testing on https://library-app.firebaseapp.com/ from the [EmberJS tutorial](https://yoember.com/).
+
+It doesn't test every scenario. But, this is goes over fundamental features of Selenium Webdriver, Chai, and Mocha.
+
+- [Selenium Webdriver](https://www.selenium.dev/documentation/en/webdriver/)
+
+  > a simple and concise programming interface that drives the browser via object-oriented API.
+
+- [Chai](https://www.chaijs.com/)
+
+  > a BDD/TDD assertion library for node and paired usually with the JavaScript testing framework.
+
+- [Mocha](https://mochajs.org/)
+
+  > a JavaScript test framework that runs on NodeJS. It's best used for async testing and runs serially.
+
+This tutorial was done on Mac OS. I don't have an explicit tutorial for Windows. But, I'll post a YouTube playlist where viewers suggest alternatives.
+
+Concepts covered:
+
+- Implementing Page Object Model.
+- Implementing Selenium Webdriver to perform actions on web element.
+- Implementing Mocha as the test framework and Mochawesome as the test reporter
+- Implement Chai for better assertions
+- Implement parallel testing with Mocha
+- Implement headless browser
+
+Scenarios for demonstration:
+
+1. Home Page
+
+   1. Given the Admin dropdown, when clicked, then it SHOULD display three items.
+   2. Given no text in Email input, when you click 'Request Invitation' button, then the button's opacity should be 0.65.
+   3. Given text in Email input, when you click 'Request Invitation' button, then there SHOULD be a confirmation message.
+
+2. Books Page
+
+   1. Given the Books list, then it SHOULD display at least one row of Book Information
+   2. Given the Authors names are clickable, when you click them, then it SHOULD display the Cancel btn and Admin dropdown.
 
 ## Step 0: Setup Tools
 
@@ -51,8 +89,8 @@ Visit tag **'0002_findWebElements'** to identify web elements. Also, in this tag
 - id
 - partialLinkText
 
-  Visit tag **'0003_sendKeysClickWaits'** for web element actions.
-  See _library.js_ file.
+Visit tag **'0003_sendKeysClickWaits'** for web element actions.
+See _library.js_ file.
 
 Some helpful resources:
 
@@ -69,9 +107,9 @@ Visit tag **'0004_mocha'** for mocha implementation.
 
    > **_npm install --global mocha_**
 
-2. If not there, add **"test_libary": "mocha"** to the _package.json_.
-   It allows you to run your test scripts with Mocha.
-   See mine as an example.
+2. Optional: if you want to run Mocha tests via NPM, modify the scripts **"test": "..."** in the _package.json_.
+
+   > **_npm run test_**
 
 3. Setup hooks for test run cycle
    https://mochajs.org/#run-cycle-overview
