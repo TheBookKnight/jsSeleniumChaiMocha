@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RedGopher4/jsSeleniumChaiMocha.git"
+    "url": "git+https://github.com/JoshuaTheEngineer/jsSeleniumChaiMocha.git"
   },
-  "author": "",
+  "author": "Joshua Cadavez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RedGopher4/jsSeleniumChaiMocha/issues"
+    "url": "https://github.com/JoshuaTheEngineer/jsSeleniumChaiMocha/issues"
   },
-  "homepage": "https://github.com/RedGopher4/jsSeleniumChaiMocha#readme",
+  "homepage": "https://github.com/JoshuTheEngineer/jsSeleniumChaiMocha#readme",
   "dependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",

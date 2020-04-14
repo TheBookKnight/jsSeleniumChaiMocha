@@ -1,3 +1,9 @@
+/**
+ * These are the locators for the Home page.
+ *
+ * @author Joshua Cadavez
+ */
+
 var webdriver = require("selenium-webdriver"),
   By = webdriver.By;
 
@@ -6,5 +12,5 @@ module.exports = {
   alertSuccess: By.css(".alert-success"),
   adminDropdown: By.id("ember20"),
   adminDropdownItems: By.css("#ember20__menu li"),
-  emailInput: By.css("input")
+  emailInput: By.css("input"),
 };

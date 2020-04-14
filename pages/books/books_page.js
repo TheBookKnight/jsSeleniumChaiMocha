@@ -1,28 +1,35 @@
+/**
+ * This is the Page Object file for the Books page.
+ * It includes shortcut methods as well.
+ *
+ * @author Joshua Cadavez
+ */
+
 var Books = require("../base_page");
 var Locator = require("./books_locators");
 
-Books.prototype.authorDropdown = function() {
+Books.prototype.authorDropdown = function () {
   return this.find(Locator.authorDropdown);
 };
 
-Books.prototype.authorCancelBtn = function() {
+Books.prototype.authorCancelBtn = function () {
   return this.find(Locator.authorCancelBtn);
 };
 
 /**
  * Methods
  */
-Books.prototype.clickAuthorName = function(authNum) {
-  return this.findAll(Locator.authorNames).then(function(authors) {
+Books.prototype.clickAuthorName = function (authNum) {
+  return this.findAll(Locator.authorNames).then(function (authors) {
     return authors[authNum].click();
   });
 };
 
-Books.prototype.getAllAuthorNames = function() {
+Books.prototype.getAllAuthorNames = function () {
   return this.findAll(Locator.authorNames);
 };
 
-Books.prototype.getAllBookInfoRows = function() {
+Books.prototype.getAllBookInfoRows = function () {
   return this.findAll(Locator.bookInfoRows);
 };
 
