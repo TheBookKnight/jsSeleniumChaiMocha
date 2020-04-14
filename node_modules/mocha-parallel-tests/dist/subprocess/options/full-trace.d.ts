@@ -1,0 +1,2 @@
+import Mocha from 'mocha';
+export default function applyFullTrace(mocha: Mocha, fullTrace?: boolean): void;

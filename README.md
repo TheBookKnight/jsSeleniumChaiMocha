@@ -138,15 +138,16 @@ Visit tag **'0010_headless'** for headless implementation.
 
 You need at least two test files to see parallel testing. Visit tag **'0011_tests_books'** for another test example with the Books tab.
 
-To ensure all tests are ran,
+1. Install **mocha-parallel-tests** to run tests in parallel.
 
-1. I edited the NPM script to point to the 'test' folder
+> npm install --save-dev mocha mocha-parallel-tests
 
-> mocha test --reporter mochawesome --reporter-options autoOpen=true
+2. Edit the _package.json_'s NPM script to point to the 'test' folder. Also, include the 'mocha-parallel-tests' parameter.
 
-2. To run them all via CLI
+> mocha-parallel-tests test --reporter mochawesome --reporter-options autoOpen=true
+
+3. To run them all via CLI
 
 > npm run test
 
-Work-In-Progress
 Visit tag **'0012_parallel'** for parallel testing implementation.

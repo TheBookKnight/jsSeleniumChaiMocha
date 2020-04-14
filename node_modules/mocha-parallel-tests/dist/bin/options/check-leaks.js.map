@@ -1,0 +1,1 @@
+{"version":3,"file":"check-leaks.js","sourceRoot":"","sources":["../../../src/bin/options/check-leaks.ts"],"names":[],"mappings":";;AAEA,SAAwB,eAAe,CAAC,KAAY,EAAE,UAAoB;IACxE,IAAI,UAAU,EAAE;QACd,KAAK,CAAC,UAAU,EAAE,CAAC;KACpB;AACH,CAAC;AAJD,kCAIC"}

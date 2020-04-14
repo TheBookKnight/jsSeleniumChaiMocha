@@ -7,9 +7,6 @@ var Books = require("../pages/books/books_page");
 chai.use(chaiAsPromised);
 var book_page;
 
-/*
- * Added Test Suite for Books tab on website
- */
 describe("Books Test Suite", function() {
   this.timeout(10000);
 

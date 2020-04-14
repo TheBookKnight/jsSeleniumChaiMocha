@@ -1,0 +1,1 @@
+{"version":3,"file":"thread.js","sourceRoot":"","sources":["../src/thread.ts"],"names":[],"mappings":";;AA4BA,SAAgB,qBAAqB;IACnC,IAAI;QACF,OAAO,CAAC,gBAAgB,CAAC,CAAC;QAC1B,OAAO,IAAI,CAAC;KACb;IAAC,OAAO,EAAE,EAAE;QACX,OAAO,KAAK,CAAC;KACd;AACH,CAAC;AAPD,sDAOC"}

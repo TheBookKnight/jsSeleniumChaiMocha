@@ -1,0 +1,2 @@
+import Mocha from 'mocha';
+export default function applyAsyncOnly(mocha: Mocha, asyncOnly?: boolean): void;
