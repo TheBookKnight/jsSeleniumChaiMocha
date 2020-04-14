@@ -7,7 +7,8 @@
 1. Used NodeJS and NPM.
    Helpful resource: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 2. Setup your editor or IDE. I used _Visual Studio Code_
-3. _Optional_ I downloaded HomeBrew (since NPM might not downloaded the packages correctly)
+3. An extension to find Web elements. I used [ChroPath](https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo)
+4. _Optional_ I downloaded HomeBrew (since NPM might not downloaded the packages correctly)
 
 ## Step 1: Download all necessary dependencies for Selenium
 
@@ -37,9 +38,15 @@ If you face some sort of UnhandledPromiseRejectionWarning like I did, use the be
 
 ## Step 2: Automate web elements with Selenium
 
-Visit tag **'0002_findWebElements'** to identify web elements.
-Visit tag **'0003_sendKeysClickWaits'** for web element actions.
-See _library.js_ file.
+Visit tag **'0002_findWebElements'** to identify web elements. Also, in this tag, I gave several examples:
+
+- xpath
+- css
+- id
+- partialLinkText
+
+  Visit tag **'0003_sendKeysClickWaits'** for web element actions.
+  See _library.js_ file.
 
 Some helpful resources:
 
@@ -74,8 +81,11 @@ Visit tag **'0005_Mochawesome'** for mocha implementation.
 
    > **_npm install --save-dev mochawesome_**
 
-2. Run command to show Test Report
+2. Run command to show Test Report.
+
    > **_mocha test --reporter mochawesome --reporter-options autoOpen=true_**
+
+3. It's optional to add the above command to the _package.json_ file in the scripts section.
 
 ## Step 5: Implementing Page Object Model (POM)
 
@@ -108,16 +118,35 @@ Visit tag **'0008_chai'** for chai implementation.
 
 ## Optional: Implement Locators
 
-Visit tag **'0009_locators'** for chai implementation.
+Visit tag **'0009_locators'** for how to organize locators.
 
 1. Moved _home_page.js_ to the newly created **home** folder.
 
 2. Created _home_locators.js_ file and moved the locators to that file.
 
-## Step 7: Implement Headless Browser Testing (and Parallel Testing)
+## Step 7: Implement Headless Browser Testing
 
 This is a great [blog post](https://www.awesome-testing.com/2019/04/headless-browser-testing-with-selenium.html) why it's better to implement Headless Browser testing. Note, be wary because I heard cases that headless isn't as [fast as expected](https://watirmelon.blog/2015/12/08/real-vs-headless-browsers-for-automated-acceptance-tests/).
 
-1. Add 'headless' to Chrome options
+Visit tag **'0010_headless'** for headless implementation.
+
+1. Add 'headless' to Chrome options.
 
 > o.addArguments("headless");
+
+## Step 8: Implement Parallel Testing
+
+You need at least two test files to see parallel testing. Visit tag **'0011_tests_books'** for another test example with the Books tab.
+
+To ensure all tests are ran,
+
+1. I edited the NPM script to point to the 'test' folder
+
+> mocha test --reporter mochawesome --reporter-options autoOpen=true
+
+2. To run them all via CLI
+
+> npm run test
+
+Work-In-Progress
+Visit tag **'0012_parallel'** for parallel testing implementation.

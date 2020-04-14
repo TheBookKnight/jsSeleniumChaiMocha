@@ -6,8 +6,6 @@ var webdriver = require("selenium-webdriver"),
   o = new chrome.Options();
 
 o.addArguments("disable-infobars");
-// This will allow you to run 'headless'
-// or run your tests without rendering UI Browser
 o.addArguments("headless");
 var service = new chrome.ServiceBuilder(path).build();
 chrome.setDefaultService(service);
