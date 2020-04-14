@@ -4,7 +4,7 @@
 
 Will be testing on https://library-app.firebaseapp.com/ from the [EmberJS tutorial](https://yoember.com/).
 
-It doesn't test every scenario. But, this is goes over fundamental features of Selenium Webdriver, Chai, and Mocha.
+This goes over the basic features of Selenium Webdriver, Chai, and Mocha.
 
 - [Selenium Webdriver](https://www.selenium.dev/documentation/en/webdriver/)
 
