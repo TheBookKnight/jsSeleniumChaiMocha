@@ -2,6 +2,8 @@
 
 > Will be testing on https://library-app.firebaseapp.com/ from a [EmberJS tutorial](https://yoember.com/).
 
+> This tutorial was done on a Mac OS. I don't have an explicit tutorial for Windows. But, I'll post a YouTube playlist where viewers suggest alternatives.
+
 ## Step 0: Setup Tools
 
 1. Used NodeJS and NPM.
@@ -15,7 +17,11 @@
 These dependencies should reflect on your 'package.json'
 Visit tag **'0001_setup'**.
 
-1. Install Selenium
+1. Start a new project with below Terminal command
+
+> **_npm init_**
+
+2. Install Selenium
 
 > **_npm install selenium-webdriver_**
 
@@ -23,18 +29,18 @@ If you face some sort of UnhandledPromiseRejectionWarning like I did, use the be
 
 > **_npm install selenium-webdriver@3.6.0_**
 
-2. Download standalone servers that implement WebDriver's wire protocol
+3. Download standalone servers that implement WebDriver's wire protocol
    There's probably a way to download and use them local to the computer.
 
 > **_sudo npm i chromedriver_**
 
 > **_sudo npm i geckodriver_** // I used Chromedriver. But, this is how to install one for FireFox.
 
-3. Create a sample JS file to sanity check if driver works
+4. Create a sample JS file to sanity check if driver works
 
 - see _library.js_ file
 
-4. Run **_node library.js_**
+5. Run **_node library.js_**
 
 ## Step 2: Automate web elements with Selenium
 
